@@ -1,11 +1,25 @@
-import React from 'react'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import HomePage from "./pages/HomePage";
+import AboutMe from "./pages/AboutMe";
+import Footer from "./components/Footer";
 
-const App = () => {
+
+
+function App() {
   return (
-    <div class="text-2xl font-bold text-green-600">
-      Andargachew Ewawey
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutMe />} />
+        <Route path="/portfolio" element={<h1>Portfolio</h1>} />
+        <Route path="/downloads" element={<h1>Downloads</h1>} />
+      </Routes>
+      <Footer />    
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
