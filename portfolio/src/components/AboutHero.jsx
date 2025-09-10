@@ -23,13 +23,13 @@ export default function AboutHero() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-gray-900 dark:text-gray-200 flex-1 text-center lg:text-left"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-xl sm:text-2xl font-bold mb-4">
             Hi, I'm Mohammed Mouhssine 👋
           </h1>
-          <h2 className="text-xl sm:text-2xl md:text-[44px] font-semibold text-heading dark:text-gray-400 mb-6">
+          <h2 className="text-lg sm:text-xl md:text-[32px] font-semibold text-heading dark:text-gray-400 mb-6">
             also known as MOMO — Full Stack Developer
           </h2>
-          <p className="text-base sm:text-[30px] leading-relaxed text-secondary dark:text-gray-300 mb-6">
+          <p className="text-base sm:text-[20px] leading-relaxed text-secondary dark:text-gray-300 mb-6">
             A passionate full stack developer originally from Morocco and currently based in Paris,
             France. With a strong background in both{" "}
             <span className="font-bold text-black dark:text-white">front-end</span> and{" "}
