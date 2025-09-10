@@ -28,7 +28,7 @@ export default function WhatICanDo() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] font-dm text-heading font-bold mb-12  dark:text-white"
+        className="text-[28px] sm:text-[20px] md:text-[30px] lg:text-[36px] font-dm text-heading font-bold mb-12  dark:text-white"
       >
         What I Can Do for You
       </motion.h2>
@@ -53,10 +53,10 @@ export default function WhatICanDo() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="space-y-4"
           >
-            <h3 className="text-2xl sm:text-3xl font-dm font-semibold">
+            <h3 className="text-xl sm:text-2xl font-dm font-semibold">
               {item.title}
             </h3>
-            <p className="text-lg sm:text-xl font-dm text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p className="text-base sm:text-lg font-dm text-gray-700 dark:text-gray-300 leading-relaxed">
               {item.description}
             </p>
           </motion.div>

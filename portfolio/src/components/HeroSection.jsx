@@ -32,11 +32,11 @@ export default function HeroSection() {
       <div className="relative z-10 w-full max-w-6xl mx-auto text-center lg:text-left lg:mx-0 lg:pl-20">
         {/* Text block */}
         <div className="px-2 sm:px-6 md:px-12 lg:px-0">
-          <h1 className="font-dm font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-tight sm:leading-[56px] lg:leading-[62px] text-black dark:text-white">
+          <h1 className="font-dm font-bold text-2xl sm:text-2xl md:text-3xl lg:text-[40px] leading-tight sm:leading-[56px] lg:leading-[62px] text-black dark:text-white">
             Hi, I’m Momo — Full-Stack Developer
           </h1>
 
-          <p className="mt-6 font-dm text-base sm:text-xl md:text-2xl lg:text-4xl leading-snug text-secondary dark:text-gray-300">
+          <p className="mt-6 font-dm text-base sm:text-xl  lg:text-2xl leading-snug text-secondary dark:text-gray-300">
             I enjoy creating products from scratch and improve existing ones.
             <br />
             In simple terms, I develop{" "}

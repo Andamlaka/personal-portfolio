@@ -12,7 +12,7 @@ import { DiCode } from "react-icons/di";   // ✅ For C language
 
 const skills = {
 "Programming Languages": [
-  { name: "C", icon: <DiCode className="text-blue-600 text-2xl" /> },
+  { name: "C", icon: <DiCode className="text-blue-600 text-xl" /> },
   { name: "Java", icon: <FaJava className="text-red-600" /> },
   { name: "JavaScript", icon: <SiJavascript className="text-yellow-500" /> },
   { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
@@ -43,7 +43,7 @@ export default function TechSection() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12"
+          className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-12"
         >
           My Skills / Toolset
         </motion.h2>
