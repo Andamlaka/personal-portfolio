@@ -51,7 +51,7 @@ export default function HeroSection() {
               >
                 {words[index]}
               </span>
-            </span>{" "}
+            </span>
             <br />
             that make a profit or enhance business.
           </p>
@@ -69,9 +69,10 @@ export default function HeroSection() {
           </div>
 
           {/* CTA - full width on small screens */}
-          <button className="mt-10 w-full sm:w-auto px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-full text-lg sm:text-xl font-semibold shadow-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition">
-            Let’s talk
-          </button>
+          <button className="mt-10 w-full h-[45px] sm:w-auto px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-full text-lg sm:text-xl font-semibold shadow-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition flex justify-center items-center">
+  Let’s talk
+</button>
+
         </div>
       </div>
 
