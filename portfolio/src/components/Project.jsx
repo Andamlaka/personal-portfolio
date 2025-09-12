@@ -36,7 +36,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="px-6 md:px-12 lg:px-24 py-16 min-h-screen bg-[#FBFBFC] dark:bg-[#101828] transition-colors">
+    <section className="px-6 md:px-12 lg:px-24 py-16 min-h-screen bg-[#F0F6FB] dark:bg-[#101828] transition-colors">
       <h2 className="text-4xl font-bold mb-10 text-center text-black dark:text-white">
         Projects
       </h2>
