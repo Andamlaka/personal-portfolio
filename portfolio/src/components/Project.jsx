@@ -43,7 +43,7 @@ const projects = [
 export default function Projects() {
   return (
     <section className='px-6 md:px-12 lg:px-24 py-16 min-h-screen bg-[#F0F6FB] dark:bg-[#101828] transition-colors'>
-      <h2 className='text-4xl font-bold mb-10 text-center text-black dark:text-white'>
+      <h2 className='text-4xl font-bold mb-10 text-left text-black dark:text-white'>
         Projects
       </h2>
 
@@ -57,7 +57,7 @@ export default function Projects() {
             className='group relative block rounded-2xl overflow-hidden bg-gray-100 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 shadow-lg w-full max-w-lg mx-auto transition-colors'
           >
             {/* Screenshot / Video */}
-            <div className='relative w-full h-80 overflow-hidden'>
+            <div className='relative w-full h-60 overflow-hidden'>
               <img
                 src={project.screenshot}
                 alt={project.title}
