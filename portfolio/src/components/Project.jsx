@@ -2,20 +2,27 @@
 
 import { motion } from "framer-motion";
 import { SiJavascript, SiNextdotjs, SiReact, SiTailwindcss, SiStripe } from "react-icons/si";
+import { FiEye } from "react-icons/fi";
+import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
     title: "Brevo Landing Page Clone",
     subtitle: "Landing Page Project",
     link: "https://mohssine32.github.io/Brevo-Repo/",
+    github: "https://github.com/mohssine32/Brevo-Repo",
     screenshot: "/landingpage.jpg",
     video: "/landingpage.mp4",
-    tech: [<SiJavascript key="js" className="w-6 h-6" />, <SiTailwindcss key="tw" className="w-6 h-6" />],
+    tech: [
+      <SiJavascript key="js" className="w-6 h-6" />,
+      <SiTailwindcss key="tw" className="w-6 h-6" />,
+    ],
   },
   {
     title: "E-commerce Website",
     subtitle: "Full Stack Project",
     link: "https://e-commerce-project-eta-ruddy.vercel.app/",
+    github: "https://github.com/mohssine32/e-commerce-project",
     screenshot: "/ecommerce.jpg",
     video: "/ecommerce.mp4",
     tech: [
@@ -36,11 +43,8 @@ export default function Projects() {
 
       <div className="grid gap-10 md:grid-cols-2 justify-center">
         {projects.map((project, index) => (
-          <motion.a
+          <motion.div
             key={index}
-            href={project.link}
-            target="_blank"
-            rel="noreferrer"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -76,7 +80,31 @@ export default function Projects() {
                 {project.tech}
               </div>
             </div>
-          </motion.a>
+
+            {/* Buttons */}
+            <div className="flex items-center justify-between p-4 gap-3">
+              {/* Live Button */}
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-center gap-2 flex-1 bg-emerald-400 hover:bg-emerald-500 text-black font-medium px-4 py-2 rounded-lg transition"
+              >
+                <FiEye className="w-5 h-5" />
+                See Live Project
+              </a>
+
+              {/* GitHub Button */}
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                className="p-3 rounded-lg border border-gray-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 hover:bg-emerald-400 dark:hover:bg-zinc-700 transition"
+              >
+                <FaGithub className="w-6 h-6 text-gray-900 dark:text-white" />
+              </a>
+            </div>
+          </motion.div>
         ))}
       </div>
     </section>
