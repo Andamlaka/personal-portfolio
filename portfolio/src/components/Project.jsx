@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import {
   SiJavascript,
-  SiNextdotjs,
+  SiCss3,
   SiReact,
   SiTailwindcss,
   SiStripe,
@@ -21,7 +21,7 @@ const projects = [
     video: '/landingpage.mp4',
     tech: [
       <SiJavascript key='js' className='w-6 h-6' />,
-      <SiTailwindcss key='tw' className='w-6 h-6' />,
+      <SiCss3 key='css' className='w-6 h-6' />,
     ],
   },
   {
@@ -32,7 +32,7 @@ const projects = [
     screenshot: '/ecommerce.jpg',
     video: '/ecommerce.mp4',
     tech: [
-      <SiNextdotjs key='next' className='w-6 h-6' />,
+    
       <SiReact key='react' className='w-6 h-6' />,
       <SiTailwindcss key='tw' className='w-6 h-6' />,
       <SiStripe key='stripe' className='w-6 h-6' />,
@@ -52,7 +52,8 @@ export default function Projects() {
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             className='group relative block rounded-2xl overflow-hidden bg-gray-100 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 shadow-lg w-full max-w-lg mx-auto transition-colors'
           >

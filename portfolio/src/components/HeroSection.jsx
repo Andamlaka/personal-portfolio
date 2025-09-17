@@ -1,4 +1,6 @@
+"use client";
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   const words = ["web solutions", "web platforms", "dashboards", "SaaS Products", "mobile apps"];
@@ -13,30 +15,36 @@ export default function HeroSection() {
 
   return (
     <section className="relative flex items-center justify-center lg:justify-start min-h-screen px-4 sm:px-6 md:px-8 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-black overflow-hidden">
-      {/* Floating labels - hidden on small screens */}
-      <span className="hidden md:inline absolute bg-orange-500 text-white text-sm font-semibold px-4 py-1 rounded-full shadow-lg animate-bounce
-                        top-24 lg:top-40 lg:right-80 right-6">
+      {/* Floating labels - responsive */}
+      <span className="hidden lg:inline absolute bg-orange-500 text-white text-xs sm:text-sm md:text-base font-semibold px-3 sm:px-4 py-1 rounded-full shadow-lg animate-bounce
+                        top-20 sm:top-28 md:top-40 right-4 sm:right-12 md:right-40">
         User experience
       </span>
 
-      <span className="hidden md:inline absolute bg-purple-600 text-white text-sm font-semibold px-4 py-1 rounded-full shadow-lg animate-pulse
-                        top-60 lg:top-72 lg:right-60 right-6">
+      <span className="hidden lg:inline absolute bg-purple-600 text-white text-xs sm:text-sm md:text-base font-semibold px-3 sm:px-4 py-1 rounded-full shadow-lg animate-pulse
+                        top-44 sm:top-56 md:top-72 right-4  md:right-20">
         Analytics
       </span>
 
-      <span className="hidden md:inline absolute bg-blue-600 text-white text-sm font-semibold px-4 py-1 rounded-full shadow-lg animate-bounce
-                        bottom-20 lg:right-80 right-6">
+      <span className="hidden lg:inline absolute bg-blue-600 text-white text-xs sm:text-sm md:text-base font-semibold px-3 sm:px-4 py-1 rounded-full shadow-lg animate-bounce
+                        bottom-16 sm:bottom-20 md:bottom-28 right-4 md:right-40">
         User interactions
       </span>
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto text-center lg:text-left lg:mx-0 lg:pl-20">
+      <motion.div
+        className="relative z-10 w-full max-w-6xl mx-auto text-center lg:text-left lg:mx-0 lg:pl-20"
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         {/* Text block */}
         <div className="px-2 sm:px-6 md:px-12 lg:px-0">
           <h1 className="font-dm font-bold text-2xl sm:text-2xl md:text-3xl lg:text-[40px] leading-tight sm:leading-[56px] lg:leading-[62px] text-black dark:text-white">
             Hi, I’m Momo — Full-Stack Developer
           </h1>
 
-          <p className="mt-6 font-dm text-base sm:text-xl  lg:text-2xl leading-snug text-secondary dark:text-gray-300">
+          <p className="mt-6 font-dm text-base sm:text-xl lg:text-2xl leading-snug text-secondary dark:text-gray-300">
             I enjoy creating products from scratch and improve existing ones.
             <br />
             In simple terms, I develop{" "}
@@ -61,20 +69,19 @@ export default function HeroSection() {
             {["Frontend", "Backend", "FinTech", "Startups", "ESN"].map((t) => (
               <span
                 key={t}
-                className="px-3 py-1 rounded-2xl font-medium bg-[#FAFAFA] dark:bg-gray-800 text-[16px] sm:text-[18px] md:text-[20px] leading-[21px] border border-gray-300 dark:border-gray-700 text-primary dark:text-gray-200"
+                className="px-3 py-1 rounded-2xl font-medium bg-[#FAFAFA] dark:bg-gray-800 text-[14px] sm:text-[16px] md:text-[18px] border border-gray-300 dark:border-gray-700 text-primary dark:text-gray-200"
               >
                 #{t}
               </span>
             ))}
           </div>
 
-          {/* CTA - full width on small screens */}
-          <button className="mt-10 w-full h-[45px] sm:w-auto px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-full text-lg sm:text-xl font-semibold shadow-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition flex justify-center items-center">
-  Let’s talk
-</button>
-
+          {/* CTA - responsive */}
+          <button className="mt-10 w-full sm:w-auto px-6 sm:px-8 py-2 sm:py-3 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm sm:text-base md:text-lg font-semibold shadow-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition flex justify-center items-center">
+            Let’s talk
+          </button>
         </div>
-      </div>
+      </motion.div>
 
       {/* Only the rotating word uses this custom animation */}
       <style>{`
