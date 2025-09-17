@@ -25,7 +25,7 @@ export default function Navbar() {
         </div>
 
         {/* Right: Desktop Links */}
-        <div className='hidden md:flex items-center space-x-4 lg:space-x-6 ml-auto'>
+        <div className='hidden lg:flex items-center space-x-4 lg:space-x-6 ml-auto'>
           <NavLink to='/' className={linkClass}>
             Home page
           </NavLink>
@@ -59,7 +59,7 @@ export default function Navbar() {
           </a>
 
           <button
-            className='bg-primary text-sm sm:text-base leading-[45px] dark:bg-white font-semibold font-dm  text-white
+            className='bg-primary text-sm sm:text-base dark:bg-white font-semibold font-dm  text-white
            dark:text-black px-4 sm:px-6 py-2 rounded-full ml-2 sm:ml-4 cursor-pointer'
           >
             Get in touch
@@ -69,7 +69,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Hamburger */}
-        <div className='md:hidden ml-auto flex items-center'>
+        <div className='lg:hidden ml-auto flex items-center'>
           <button
             className='text-2xl p-2 cursor-pointer'
             onClick={() => setMenuOpen(!menuOpen)}
@@ -82,7 +82,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className='md:hidden bg-white dark:bg-primary shadow-lg border-t border-gray-200 dark:border-gray-700 cursor-pointer'>
+        <div className='lg:hidden bg-white dark:bg-primary shadow-lg border-t border-gray-200 dark:border-gray-700 cursor-pointer'>
           <div className='flex flex-col px-4 py-4 space-y-4'>
             {/* Links */}
             <NavLink
