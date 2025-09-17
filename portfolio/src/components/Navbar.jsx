@@ -59,7 +59,7 @@ export default function Navbar() {
           </a>
 
           <button
-            className='bg-primary text-sm sm:text-base dark:bg-white font-semibold font-dm  text-white
+            className='bg-primary w-auto text-sm sm:text-base dark:bg-white font-semibold font-dm  text-white
            dark:text-black px-4 sm:px-6 py-2 rounded-full ml-2 sm:ml-4 cursor-pointer'
           >
             Get in touch

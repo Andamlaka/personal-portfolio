@@ -1,4 +1,3 @@
-"use client"; // if you're in Next.js App Router
 
 import { motion } from "framer-motion";
 
@@ -26,7 +25,8 @@ export default function WhatICanDo() {
       {/* Section Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="text-[28px] sm:text-[20px] md:text-[30px] lg:text-[36px] font-dm text-heading font-bold mb-12  dark:text-white"
       >
@@ -34,23 +34,14 @@ export default function WhatICanDo() {
       </motion.h2>
 
       {/* Grid */}
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: {},
-          visible: { transition: { staggerChildren: 0.2 } },
-        }}
-        className="grid gap-12 md:gap-16 md:grid-cols-3 text-left max-w-10xl mx-auto"
-      >
+      <div className="grid gap-12 md:gap-16 md:grid-cols-3 text-left max-w-10xl mx-auto">
         {items.map((item, index) => (
           <motion.div
             key={index}
-            variants={{
-              hidden: { opacity: 0, y: 40 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
             className="space-y-4"
           >
             <h3 className="text-xl sm:text-2xl font-dm font-semibold">
@@ -61,7 +52,7 @@ export default function WhatICanDo() {
             </p>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }
