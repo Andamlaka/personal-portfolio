@@ -22,14 +22,14 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className='relative top-40 mb-48 flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-black'>
-      <div className='relative w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-12'>
+    <section className='relative  flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-black'>
+      <div className='relative top-32 mb-36 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-12'>
         {/* Desktop Image */}
         <div className='hidden lg:block flex-shrink-0 w-1/3'>
           <img
             src='/homeHeroPic.jpg'
             alt='Developer working'
-            className='w-full h-auto max-h-[500px] object-cover rounded-2xl shadow-xl'
+            className='w-full h-auto max-h-[600px] object-cover rounded-2xl shadow-xl'
           />
         </div>
 
@@ -101,13 +101,13 @@ export default function HeroSection() {
       </div>
 
       {/* Floating labels (desktop only) */}
-      <span className='hidden lg:inline absolute bg-orange-500 text-white text-sm font-semibold px-4 py-1 rounded-full shadow-lg animate-bounce top-6 right-40'>
+      <span className='hidden lg:inline absolute bg-orange-500 text-white text-sm font-semibold px-4 py-1 rounded-full shadow-lg animate-bounce top-28 right-40'>
         User experience
       </span>
-      <span className='hidden lg:inline absolute bg-purple-600 text-white text-sm font-semibold px-4 py-1 rounded-full shadow-lg animate-pulse top-40 right-20'>
+      <span className='hidden lg:inline absolute bg-purple-600 text-white text-sm font-semibold px-4 py-1 rounded-full shadow-lg animate-pulse top-00 right-20'>
         Analytics
       </span>
-      <span className='hidden lg:inline absolute bg-blue-600 text-white text-sm font-semibold px-4 py-1 rounded-full shadow-lg animate-bounce bottom-10 right-40'>
+      <span className='hidden lg:inline absolute bg-blue-600 text-white text-sm font-semibold px-4 py-1 rounded-full shadow-lg animate-bounce bottom-16 right-40'>
         User interactions
       </span>
 

@@ -25,8 +25,8 @@ export default function Blog() {
   ];
 
   return (
-    <section className="mt-20 px-6 py-16 md:px-12 lg:px-24 bg-white dark:bg-gray-950 text-gray-900 dark:text-white min-h-screen">
-      <div className="max-w-5xl mx-auto">
+    <section className=" px-6 py-16 md:px-12 lg:px-24 bg-white dark:bg-gray-950 text-gray-900 dark:text-white min-h-screen">
+      <div className="max-w-5xl mt-12 mx-auto">
         {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
