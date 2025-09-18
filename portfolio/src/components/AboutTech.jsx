@@ -4,21 +4,22 @@ import { motion } from "framer-motion";
 import {
   SiJavascript, SiTypescript, SiPython, SiPhp, SiReact,
   SiExpress, SiNestjs, SiHtml5, SiCss3, SiTailwindcss,
-  SiFigma, SiAdobephotoshop
+  SiFigma, SiAdobephotoshop, 
+  SiMysql, SiPostgresql, SiMongodb, SiPrisma
 } from "react-icons/si";
 
 import { FaJava } from "react-icons/fa";   // ✅ Java
 import { DiCode } from "react-icons/di";   // ✅ For C language
 
 const skills = {
-"Programming Languages": [
-  { name: "C", icon: <DiCode className="text-blue-600 text-xl" /> },
-  { name: "Java", icon: <FaJava className="text-red-600" /> },
-  { name: "JavaScript", icon: <SiJavascript className="text-yellow-500" /> },
-  { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
-  { name: "Python", icon: <SiPython className="text-green-500" /> },
-  { name: "PHP", icon: <SiPhp className="text-indigo-500" /> },
-],
+  "Programming Languages": [
+    { name: "C", icon: <DiCode className="text-blue-600 text-xl" /> },
+    { name: "Java", icon: <FaJava className="text-red-600" /> },
+    { name: "JavaScript", icon: <SiJavascript className="text-yellow-500" /> },
+    { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
+    { name: "Python", icon: <SiPython className="text-green-500" /> },
+    { name: "PHP", icon: <SiPhp className="text-indigo-500" /> },
+  ],
 
   "Framework & Tech": [
     { name: "React", icon: <SiReact className="text-cyan-400" /> },
@@ -28,6 +29,14 @@ const skills = {
     { name: "CSS3", icon: <SiCss3 className="text-blue-600" /> },
     { name: "TailwindCSS", icon: <SiTailwindcss className="text-sky-500" /> },
   ],
+
+  "Databases & ORM": [
+    { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
+    { name: "PostgreSQL", icon: <SiPostgresql className="text-sky-700" /> },
+    { name: "MongoDB / Mongoose", icon: <SiMongodb className="text-green-600" /> },
+    { name: "Prisma", icon: <SiPrisma className="text-indigo-600" /> },
+  ],
+
   "Design": [
     { name: "Figma", icon: <SiFigma className="text-pink-500" /> },
     { name: "Photoshop", icon: <SiAdobephotoshop className="text-blue-500" /> },
