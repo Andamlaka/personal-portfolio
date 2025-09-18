@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Project from "../components/project";
+import Projects from "../components/Projects";
 
 const Portfolio = () => {
   return (
@@ -24,7 +24,7 @@ const Portfolio = () => {
 
       {/* Projects */}
       <div className="mt-16">
-        <Project />
+        <Projects />
       </div>
     </section>
   );
