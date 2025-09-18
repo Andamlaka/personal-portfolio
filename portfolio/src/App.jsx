@@ -10,7 +10,7 @@ import Portfolio from "./pages/Portfolio";
 
 function App() {
   return (
-    <div>
+    <div >
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
