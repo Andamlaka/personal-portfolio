@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
   const words = [
@@ -11,6 +12,7 @@ export default function HeroSection() {
     'mobile apps',
   ];
   const [index, setIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -79,7 +81,7 @@ export default function HeroSection() {
             {['Frontend', 'Backend', 'FinTech', 'Startups', 'ESN'].map((t) => (
               <span
                 key={t}
-                className='px-3 py-1 rounded-2xl font-medium bg-[#FAFAFA] dark:bg-gray-800 text-sm sm:text-base md:text-lg border border-gray-300 dark:border-gray-700 text-primary dark:text-gray-200'
+                className='px-3 py-1 rounded-2xl font-medium bg-[#C9C8CB] dark:bg-gray-800 text-sm sm:text-base md:text-lg border border-gray-300 dark:border-gray-700 text-primary dark:text-gray-200'
               >
                 #{t}
               </span>
@@ -87,9 +89,14 @@ export default function HeroSection() {
           </div>
 
           {/* CTA */}
-          <button className='mt-4 sm:mt-6 w-full sm:w-auto px-8 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full text-base sm:text-lg md:text-xl font-semibold shadow-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition flex justify-center items-center'>
-            Let’s talk
-          </button>
+          <button
+      onClick={() => navigate("/contact")}
+      className="mt-4 sm:mt-6 w-full sm:w-auto px-8 py-3 bg-black dark:bg-white text-white dark:text-black 
+                 rounded-full text-base sm:text-lg md:text-xl font-semibold shadow-lg
+                 hover:bg-gray-800 dark:hover:bg-gray-200 transition flex justify-center items-center cursor-pointer"
+    >
+      Let’s talk
+    </button>
         </motion.div>
       </div>
 

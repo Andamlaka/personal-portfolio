@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaLinkedin, FaBehance, FaYoutube } from 'react-icons/fa';
 import ThemeToggle from './ThemeToggle';
-
+import { useNavigate } from "react-router-dom";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const navigate = useNavigate();
   const linkClass = ({ isActive }) =>
     isActive
       ? 'text-secondary dark:text-gray-300 font-manrope font-semibold text-base'
@@ -59,6 +59,7 @@ export default function Navbar() {
           </a>
 
           <button
+          onClick={() => navigate("/contact")}
             className='bg-primary w-auto text-sm sm:text-base dark:bg-white font-semibold font-dm  text-white
            dark:text-black px-4 sm:px-6 py-2 rounded-full ml-2 sm:ml-4 cursor-pointer'
           >
