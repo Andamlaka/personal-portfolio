@@ -102,13 +102,13 @@ export default function HeroSection() {
 
       {/* Floating labels (desktop only) */}
       <span className='hidden lg:inline absolute bg-orange-500 text-white text-sm font-semibold px-4 py-1 rounded-full shadow-lg animate-bounce top-28 right-40'>
-        Front-end
+        Front-End
       </span>
       <span className='hidden lg:inline absolute bg-purple-600 text-white text-sm font-semibold px-4 py-1 rounded-full shadow-lg animate-pulse top-00 right-20'>
         Analytics
       </span>
       <span className='hidden lg:inline absolute bg-blue-600 text-white text-sm font-semibold px-4 py-1 rounded-full shadow-lg animate-bounce bottom-16 right-40'>
-        Back-end
+        Back-End
       </span>
 
       {/* Rotating word animation */}
